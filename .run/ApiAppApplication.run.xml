@@ -1,0 +1,18 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ApiAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <envs>
+      <env name="sss" value="classpath:db/changelog/db.changelog-hotels.xml" />
+    </envs>
+    <module name="travel-app-parent" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.hotel.ApiAppApplication" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.hotel.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

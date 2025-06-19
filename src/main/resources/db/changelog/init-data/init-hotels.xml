@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+        http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="ins-data-hot-1" author="anton">
+        <insert tableName="hotels">
+            <column name="name" value="DoubleTree by Hilton Minsk"/>
+            <column name="brand" value="Hilton"/>
+            <column name="description" value="Luxury hotel with stunning views in Minsk city center."/>
+        </insert>
+        <insert tableName="hotels">
+            <column name="name" value="Nevsky Hotel Saint Petersburg"/>
+            <column name="brand" value="Nevsky"/>
+            <column name="description" value="Modern hotel in the heart of Saint Petersburg."/>
+        </insert>
+        <insert tableName="hotels">
+            <column name="name" value="Grand Moscow Hotel"/>
+            <column name="brand" value="Grand"/>
+            <column name="description" value="Comfortable stay in Moscow's business district."/>
+        </insert>
+        <insert tableName="hotels">
+            <column name="name" value="Berlin Central Inn"/>
+            <column name="brand" value="BerlinStay"/>
+            <column name="description" value="Cozy and affordable hotel near Berlin main station."/>
+        </insert>
+        <insert tableName="hotels">
+            <column name="name" value="Parisian Elegance"/>
+            <column name="brand" value="Parisian"/>
+            <column name="description" value="Elegant rooms in the heart of Paris."/>
+        </insert>
+        <insert tableName="hotels">
+            <column name="name" value="London Royal Suites"/>
+            <column name="brand" value="Royal"/>
+            <column name="description" value="Luxury suites with royal service in London."/>
+        </insert>
+        <insert tableName="hotels">
+            <column name="name" value="Tokyo Garden Hotel"/>
+            <column name="brand" value="TokyoStay"/>
+            <column name="description" value="Peaceful garden views and traditional hospitality."/>
+        </insert>
+        <insert tableName="hotels">
+            <column name="name" value="New York City Lodge"/>
+            <column name="brand" value="NYCLodge"/>
+            <column name="description" value="Affordable lodge in the heart of NYC."/>
+        </insert>
+        <insert tableName="hotels">
+            <column name="name" value="Sydney Harbour Hotel"/>
+            <column name="brand" value="HarbourStay"/>
+            <column name="description" value="Stunning views of Sydney harbour."/>
+        </insert>
+        <insert tableName="hotels">
+            <column name="name" value="Rome Classic Hotel"/>
+            <column name="brand" value="Classic"/>
+            <column name="description" value="Historic charm in the center of Rome."/>
+        </insert>
+    </changeSet>
+
+
+
+</databaseChangeLog>

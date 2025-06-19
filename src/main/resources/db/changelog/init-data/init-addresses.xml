@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+      http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <!-- Добавляем адреса -->
+    <changeSet id="ins-data-addr-1" author="anton">
+        <insert tableName="address">
+            <column name="house_number" value="9"/>
+            <column name="street" value="Pobediteley Avenue"/>
+            <column name="city" value="Minsk"/>
+            <column name="country" value="Belarus"/>
+            <column name="post_code" value="220004"/>
+        </insert>
+
+        <insert tableName="address">
+            <column name="house_number" value="12"/>
+            <column name="street" value="Lenina Street"/>
+            <column name="city" value="Minsk"/>
+            <column name="country" value="Belarus"/>
+            <column name="post_code" value="220030"/>
+        </insert>
+
+        <insert tableName="address">
+            <column name="house_number" value="4"/>
+            <column name="street" value="Nezavisimosti Avenue"/>
+            <column name="city" value="Minsk"/>
+            <column name="country" value="Belarus"/>
+            <column name="post_code" value="220050"/>
+        </insert>
+
+        <insert tableName="address">
+            <column name="house_number" value="15"/>
+            <column name="street" value="Surganova Street"/>
+            <column name="city" value="Minsk"/>
+            <column name="country" value="Belarus"/>
+            <column name="post_code" value="220100"/>
+        </insert>
+
+        <insert tableName="address">
+            <column name="house_number" value="7"/>
+            <column name="street" value="Kalvariyskaya Street"/>
+            <column name="city" value="Minsk"/>
+            <column name="country" value="Belarus"/>
+            <column name="post_code" value="220014"/>
+        </insert>
+
+        <insert tableName="address">
+            <column name="house_number" value="21"/>
+            <column name="street" value="Mayakovskogo Street"/>
+            <column name="city" value="Minsk"/>
+            <column name="country" value="Belarus"/>
+            <column name="post_code" value="220020"/>
+        </insert>
+
+        <insert tableName="address">
+            <column name="house_number" value="10"/>
+            <column name="street" value="Partizanskiy Avenue"/>
+            <column name="city" value="Minsk"/>
+            <column name="country" value="Belarus"/>
+            <column name="post_code" value="220033"/>
+        </insert>
+
+        <insert tableName="address">
+            <column name="house_number" value="2"/>
+            <column name="street" value="Zamkovaya Street"/>
+            <column name="city" value="Minsk"/>
+            <column name="country" value="Belarus"/>
+            <column name="post_code" value="220002"/>
+        </insert>
+
+        <insert tableName="address">
+            <column name="house_number" value="18"/>
+            <column name="street" value="Gikalo Street"/>
+            <column name="city" value="Minsk"/>
+            <column name="country" value="Belarus"/>
+            <column name="post_code" value="220040"/>
+        </insert>
+
+        <insert tableName="address">
+            <column name="house_number" value="6"/>
+            <column name="street" value="Internatsionalnaya Street"/>
+            <column name="city" value="Minsk"/>
+            <column name="country" value="Belarus"/>
+            <column name="post_code" value="220005"/>
+        </insert>
+    </changeSet>
+
+    <!-- Связываем отели с адресами -->
+    <changeSet id="ins-data-addr-2" author="anton">
+        <update tableName="hotels">
+            <column name="address_id" value="1"/>
+            <where>id = 1</where>
+        </update>
+        <update tableName="hotels">
+            <column name="address_id" value="2"/>
+            <where>id = 2</where>
+        </update>
+        <update tableName="hotels">
+            <column name="address_id" value="3"/>
+            <where>id = 3</where>
+        </update>
+        <update tableName="hotels">
+            <column name="address_id" value="4"/>
+            <where>id = 4</where>
+        </update>
+        <update tableName="hotels">
+            <column name="address_id" value="5"/>
+            <where>id = 5</where>
+        </update>
+        <update tableName="hotels">
+            <column name="address_id" value="6"/>
+            <where>id = 6</where>
+        </update>
+        <update tableName="hotels">
+            <column name="address_id" value="7"/>
+            <where>id = 7</where>
+        </update>
+        <update tableName="hotels">
+            <column name="address_id" value="8"/>
+            <where>id = 8</where>
+        </update>
+        <update tableName="hotels">
+            <column name="address_id" value="9"/>
+            <where>id = 9</where>
+        </update>
+        <update tableName="hotels">
+            <column name="address_id" value="10"/>
+            <where>id = 10</where>
+        </update>
+    </changeSet>
+
+</databaseChangeLog>
