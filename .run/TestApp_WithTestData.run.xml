@@ -3,7 +3,7 @@
     <envs>
       <env name="SPRING_PROFILES_ACTIVE" value="test" />
     </envs>
-    <module name="travel-app-parent" />
+    <module name="travel-app" />
     <option name="PROGRAM_PARAMETERS" value="--spring.profiles.active=test" />
     <option name="SPRING_BOOT_MAIN_CLASS" value="com.hotel.ApiAppApplication" />
     <extension name="coverage">

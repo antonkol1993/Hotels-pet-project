@@ -37,6 +37,14 @@ spring:
     console:
       enabled: true
       path: /h2-console
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, prometheus
+  metrics:
+    tags:
+      application: travel-app
 
 logging:
   level:

@@ -2,6 +2,7 @@ package com.hotel.service;
 
 import com.hotel.dao.repository.AmenityRepository;
 import com.hotel.dao.repository.HotelRepository;
+import com.hotel.metrics.BookingMetrics;
 import com.hotel.model.dto.*;
 import com.hotel.model.entity.Amenity;
 import com.hotel.model.entity.Hotel;
@@ -23,14 +24,17 @@ public class HotelService {
     private final HotelRepository hotelRepository;
     private final AmenityRepository amenityRepository;
     private final HotelMapper hotelMapper;
+    private final BookingMetrics bookingMetrics;
 
     public List<HotelDTO<String>> getAllHotelsBrief() {
+        bookingMetrics.onBriefRequest(); // todo metrics
         return hotelRepository.findAll().stream()
                 .map(hotelMapper::toBriefDto)
                 .collect(Collectors.toList());
     }
 
     public Optional<HotelDTO<AddressDTO>> getHotelDetail(@NonNull Long id) {
+        bookingMetrics.onDetailRequest(); // todo metrics
         return hotelRepository.findById(id)
                 .map(hotelMapper::toDetailDto);
     }
