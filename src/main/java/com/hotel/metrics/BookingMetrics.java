@@ -7,33 +7,32 @@ import org.springframework.stereotype.Component;
 @Component
 public class BookingMetrics {
 
-    private final MeterRegistry registry;
+    private final Counter briefCounter;
+    private final Counter detailCounter;
 
     public BookingMetrics(MeterRegistry registry) {
-        this.registry = registry;
+        this.briefCounter = Counter.builder("hotel_requests_brief_total")
+                .description("Количество запросов на КРАТКИЙ список отелей")
+                .register(registry);
+
+        this.detailCounter = Counter.builder("hotel_requests_detail_total")
+                .description("Количество запросов на ПОДРОБНУЮ ИНФУ об отеле")
+                .register(registry);
     }
 
     public void onBriefRequest() {
-        Counter.builder("hotel_requests_total")
-                .tag("type", "brief")
-                .description("Количество запросов на краткий список отелей")
-                .register(registry)
-                .increment();
+        briefCounter.increment();
     }
 
     public void onDetailRequest() {
-        Counter.builder("hotel_requests_total")
-                .tag("type", "detail")
-                .description("Количество запросов на подробную информацию об отеле")
-                .register(registry)
-                .increment();
+        detailCounter.increment();
     }
 
-    public void onBooking() {
-        Counter.builder("hotel_requests_total")
-                .tag("type", "booking")
-                .description("Количество созданных отелей")
-                .register(registry)
-                .increment();
-    }
+//    public void onBooking() {
+//        Counter.builder("hotel_requests_total")
+//                .tag("type", "booking")
+//                .description("Количество созданных отелей")
+//                .register(registry)
+//                .increment();
+//    }
 }
