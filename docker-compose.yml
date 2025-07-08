@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+
+  api-app:
+    build:
+      context: src/main/java               # Путь к папке с Dockerfile твоего Spring Boot приложения
+      dockerfile: Dockerfile   # Имя Dockerfile (если отличается - поправь)
+    image: your-dockerhub-username/api-app:latest  # Можно оставить для тега образа
+    ports:
+      - "8092:8092"
+    environment:
+      SPRING_PROFILES_ACTIVE: test   # если используешь профили (необязательно)
+    depends_on:
+      - prometheus
+
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./src/main/resources/prometheus.yaml:/etc/prometheus/prometheus.yml:ro
+    depends_on:
+      - api-app
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: admin   # сменить на надежный пароль
+    volumes:
+      - grafana-data:/var/lib/grafana
+    depends_on:
+      - prometheus
+
+volumes:
+  grafana-data:
