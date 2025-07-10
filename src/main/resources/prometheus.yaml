@@ -5,4 +5,4 @@ scrape_configs:
   - job_name: 'hotel-service'
     metrics_path: '/property-view/actuator/prometheus'
     static_configs:
-      - targets: ['localhost:8092']
+      - targets: ['api-app:8092']

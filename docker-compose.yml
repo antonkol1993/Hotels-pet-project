@@ -4,15 +4,13 @@ services:
 
   api-app:
     build:
-      context: src/main/java               # Путь к папке с Dockerfile твоего Spring Boot приложения
+      context: .               # Путь к папке с Dockerfile твоего Spring Boot приложения
       dockerfile: Dockerfile   # Имя Dockerfile (если отличается - поправь)
-    image: your-dockerhub-username/api-app:latest  # Можно оставить для тега образа
+    image: api-app:latest  # Можно оставить для тега образа
     ports:
       - "8092:8092"
     environment:
       SPRING_PROFILES_ACTIVE: test   # если используешь профили (необязательно)
-    depends_on:
-      - prometheus
 
   prometheus:
     image: prom/prometheus:latest
