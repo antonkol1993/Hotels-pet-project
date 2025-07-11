@@ -1,5 +1,10 @@
 version: '3.8'
 
+volumes:
+  grafana-data:
+  m2-volume:
+
+
 services:
 
   api-app:
@@ -12,7 +17,7 @@ services:
     environment:
       SPRING_PROFILES_ACTIVE: test   # если используешь профили (необязательно)
     volumes:
-      - ${M2_PATH}:/root/.m2
+      - m2-volume:/root/.m2
 
 
   prometheus:
@@ -38,5 +43,4 @@ services:
       - prometheus
 
 
-volumes:
-  grafana-data:
+
