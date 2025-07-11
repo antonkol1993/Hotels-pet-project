@@ -11,6 +11,9 @@ services:
       - "8092:8092"
     environment:
       SPRING_PROFILES_ACTIVE: test   # если используешь профили (необязательно)
+    volumes:
+      - ${M2_PATH}:/root/.m2
+
 
   prometheus:
     image: prom/prometheus:latest
@@ -26,11 +29,14 @@ services:
     ports:
       - "3000:3000"
     environment:
-      GF_SECURITY_ADMIN_PASSWORD: admin   # сменить на надежный пароль
+      GF_SECURITY_ADMIN_PASSWORD: admin
     volumes:
       - grafana-data:/var/lib/grafana
+      - ./grafana/datasources:/etc/grafana/provisioning/datasources
+      - ./grafana/dashboards:/etc/grafana/dashboards
     depends_on:
       - prometheus
+
 
 volumes:
   grafana-data:

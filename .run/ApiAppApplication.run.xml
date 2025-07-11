@@ -3,7 +3,7 @@
     <envs>
       <env name="sss" value="classpath:db/changelog/db.changelog-hotels.xml" />
     </envs>
-    <module name="travel-app-parent" />
+    <module name="travel-app" />
     <option name="SPRING_BOOT_MAIN_CLASS" value="com.hotel.ApiAppApplication" />
     <extension name="coverage">
       <pattern>
