@@ -69,6 +69,8 @@ services:
 
   filebeat:
     image: docker.elastic.co/beats/filebeat:8.13.0
+    command: [ "--strict.perms=false" ]
+
     volumes:
       - ./filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
       - ./logs:/app/logs
