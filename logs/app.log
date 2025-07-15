@@ -1,0 +1,305 @@
+2025-07-15T14:23:03.738Z  INFO 1 --- [api-app] [main] com.hotel.ApiAppApplication              : Starting ApiAppApplication using Java 17.0.15 with PID 1 (/app/app.jar started by root in /)
+2025-07-15T14:23:03.975Z  INFO 1 --- [api-app] [main] com.hotel.ApiAppApplication              : The following 1 profile is active: "test"
+2025-07-15T14:23:42.021Z  INFO 1 --- [api-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-15T14:23:42.505Z  INFO 1 --- [api-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 410 ms. Found 2 JPA repository interfaces.
+2025-07-15T14:23:51.684Z  INFO 1 --- [api-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8092 (http)
+2025-07-15T14:23:52.039Z  INFO 1 --- [api-app] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-15T14:23:52.063Z  INFO 1 --- [api-app] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-07-15T14:23:52.372Z  INFO 1 --- [api-app] [main] o.a.c.c.C.[.[.[/property-view]           : Initializing Spring embedded WebApplicationContext
+2025-07-15T14:23:52.381Z  INFO 1 --- [api-app] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 45675 ms
+2025-07-15T14:23:57.221Z  INFO 1 --- [api-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-15T14:23:58.950Z  INFO 1 --- [api-app] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:hoteldb user=SA
+2025-07-15T14:23:58.956Z  INFO 1 --- [api-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-15T14:23:59.454Z  INFO 1 --- [api-app] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-07-15T14:24:07.518Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2025-07-15T14:24:08.445Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-07-15T14:24:09.634Z  INFO 1 --- [api-app] [main] liquibase.snapshot                       : Creating snapshot
+2025-07-15T14:24:10.781Z  INFO 1 --- [api-app] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2025-07-15T14:24:10.792Z  INFO 1 --- [api-app] [main] liquibase.command                        : Using deploymentId: 2589437107
+2025-07-15T14:24:10.830Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-07-15T14:24:11.726Z  INFO 1 --- [api-app] [main] liquibase.ui                             : Running Changeset: db/changelog/changeset-schema.xml::c-schema-1::anton
+2025-07-15T14:24:11.988Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Custom SQL executed
+2025-07-15T14:24:11.993Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : ChangeSet db/changelog/changeset-schema.xml::c-schema-1::anton ran successfully in 245ms
+2025-07-15T14:24:12.195Z  INFO 1 --- [api-app] [main] liquibase.ui                             : Running Changeset: db/changelog/changeset-tables.xml::1::anton
+2025-07-15T14:24:12.263Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Table address created
+2025-07-15T14:24:12.266Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : ChangeSet db/changelog/changeset-tables.xml::1::anton ran successfully in 43ms
+2025-07-15T14:24:12.283Z  INFO 1 --- [api-app] [main] liquibase.ui                             : Running Changeset: db/changelog/changeset-tables.xml::2::anton
+2025-07-15T14:24:12.334Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Table contacts created
+2025-07-15T14:24:12.337Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : ChangeSet db/changelog/changeset-tables.xml::2::anton ran successfully in 25ms
+2025-07-15T14:24:12.370Z  INFO 1 --- [api-app] [main] liquibase.ui                             : Running Changeset: db/changelog/changeset-tables.xml::3::anton
+2025-07-15T14:24:12.413Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Table arrival_time created
+2025-07-15T14:24:12.416Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : ChangeSet db/changelog/changeset-tables.xml::3::anton ran successfully in 41ms
+2025-07-15T14:24:12.422Z  INFO 1 --- [api-app] [main] liquibase.ui                             : Running Changeset: db/changelog/changeset-tables.xml::4::anton
+2025-07-15T14:24:12.463Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Table amenities created
+2025-07-15T14:24:12.468Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : ChangeSet db/changelog/changeset-tables.xml::4::anton ran successfully in 29ms
+2025-07-15T14:24:12.527Z  INFO 1 --- [api-app] [main] liquibase.ui                             : Running Changeset: db/changelog/changeset-tables.xml::5::anton
+2025-07-15T14:24:12.555Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Table hotels created
+2025-07-15T14:24:12.653Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Foreign key constraint added to hotels (address_id)
+2025-07-15T14:24:12.782Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Foreign key constraint added to hotels (contacts_id)
+2025-07-15T14:24:12.846Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Foreign key constraint added to hotels (arrival_time_id)
+2025-07-15T14:24:12.886Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : ChangeSet db/changelog/changeset-tables.xml::5::anton ran successfully in 349ms
+2025-07-15T14:24:12.924Z  INFO 1 --- [api-app] [main] liquibase.ui                             : Running Changeset: db/changelog/changeset-tables.xml::6::anton
+2025-07-15T14:24:12.962Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Table hotel_amenities created
+2025-07-15T14:24:12.981Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Primary key added to hotel_amenities (hotel_id, amenity_id)
+2025-07-15T14:24:13.035Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Foreign key constraint added to hotel_amenities (hotel_id)
+2025-07-15T14:24:13.053Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Foreign key constraint added to hotel_amenities (amenity_id)
+2025-07-15T14:24:13.087Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : ChangeSet db/changelog/changeset-tables.xml::6::anton ran successfully in 133ms
+2025-07-15T14:24:13.183Z  INFO 1 --- [api-app] [main] liquibase.ui                             : Running Changeset: db/changelog/init-data/init-hotels.xml::ins-data-hot-1::anton
+2025-07-15T14:24:13.266Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into hotels
+2025-07-15T14:24:13.301Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into hotels
+2025-07-15T14:24:13.312Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into hotels
+2025-07-15T14:24:13.331Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into hotels
+2025-07-15T14:24:13.335Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into hotels
+2025-07-15T14:24:13.383Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into hotels
+2025-07-15T14:24:13.387Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into hotels
+2025-07-15T14:24:13.403Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into hotels
+2025-07-15T14:24:13.424Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into hotels
+2025-07-15T14:24:13.437Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into hotels
+2025-07-15T14:24:13.481Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : ChangeSet db/changelog/init-data/init-hotels.xml::ins-data-hot-1::anton ran successfully in 284ms
+2025-07-15T14:24:13.573Z  INFO 1 --- [api-app] [main] liquibase.ui                             : Running Changeset: db/changelog/init-data/init-addresses.xml::ins-data-addr-1::anton
+2025-07-15T14:24:13.639Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into address
+2025-07-15T14:24:13.659Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into address
+2025-07-15T14:24:13.674Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into address
+2025-07-15T14:24:13.695Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into address
+2025-07-15T14:24:13.729Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into address
+2025-07-15T14:24:13.795Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into address
+2025-07-15T14:24:13.872Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into address
+2025-07-15T14:24:13.894Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into address
+2025-07-15T14:24:13.916Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into address
+2025-07-15T14:24:13.933Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into address
+2025-07-15T14:24:13.952Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : ChangeSet db/changelog/init-data/init-addresses.xml::ins-data-addr-1::anton ran successfully in 347ms
+2025-07-15T14:24:14.054Z  INFO 1 --- [api-app] [main] liquibase.ui                             : Running Changeset: db/changelog/init-data/init-addresses.xml::ins-data-addr-2::anton
+2025-07-15T14:24:14.159Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Data updated in hotels
+2025-07-15T14:24:14.232Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Data updated in hotels
+2025-07-15T14:24:14.318Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Data updated in hotels
+2025-07-15T14:24:14.374Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Data updated in hotels
+2025-07-15T14:24:14.409Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Data updated in hotels
+2025-07-15T14:24:14.456Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Data updated in hotels
+2025-07-15T14:24:14.472Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Data updated in hotels
+2025-07-15T14:24:14.492Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Data updated in hotels
+2025-07-15T14:24:14.547Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Data updated in hotels
+2025-07-15T14:24:14.566Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Data updated in hotels
+2025-07-15T14:24:14.598Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : ChangeSet db/changelog/init-data/init-addresses.xml::ins-data-addr-2::anton ran successfully in 443ms
+2025-07-15T14:24:14.846Z  INFO 1 --- [api-app] [main] liquibase.ui                             : Running Changeset: db/changelog/init-data/init-contacts.xml::ins-data-cont-1::anton
+2025-07-15T14:24:15.021Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into contacts
+2025-07-15T14:24:15.036Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into contacts
+2025-07-15T14:24:15.051Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into contacts
+2025-07-15T14:24:15.147Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into contacts
+2025-07-15T14:24:15.177Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into contacts
+2025-07-15T14:24:18.210Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into contacts
+2025-07-15T14:24:18.522Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into contacts
+2025-07-15T14:24:18.588Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into contacts
+2025-07-15T14:24:18.664Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into contacts
+2025-07-15T14:24:18.743Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into contacts
+2025-07-15T14:24:19.238Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : ChangeSet db/changelog/init-data/init-contacts.xml::ins-data-cont-1::anton ran successfully in 4220ms
+2025-07-15T14:24:19.355Z  INFO 1 --- [api-app] [main] liquibase.ui                             : Running Changeset: db/changelog/init-data/init-contacts.xml::ins-data-cont-2::anton
+2025-07-15T14:24:19.409Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Data updated in hotels
+2025-07-15T14:24:19.490Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Data updated in hotels
+2025-07-15T14:24:19.538Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Data updated in hotels
+2025-07-15T14:24:19.583Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Data updated in hotels
+2025-07-15T14:24:19.595Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Data updated in hotels
+2025-07-15T14:24:19.626Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Data updated in hotels
+2025-07-15T14:24:20.659Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Data updated in hotels
+2025-07-15T14:24:20.671Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Data updated in hotels
+2025-07-15T14:24:20.691Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Data updated in hotels
+2025-07-15T14:24:20.696Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Data updated in hotels
+2025-07-15T14:24:21.286Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : ChangeSet db/changelog/init-data/init-contacts.xml::ins-data-cont-2::anton ran successfully in 1915ms
+2025-07-15T14:24:21.402Z  INFO 1 --- [api-app] [main] liquibase.ui                             : Running Changeset: db/changelog/init-data/init-arrival_time.xml::ins-data-arr-1::anton
+2025-07-15T14:24:21.414Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into arrival_time
+2025-07-15T14:24:21.429Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into arrival_time
+2025-07-15T14:24:21.444Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into arrival_time
+2025-07-15T14:24:21.449Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into arrival_time
+2025-07-15T14:24:21.477Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into arrival_time
+2025-07-15T14:24:21.540Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into arrival_time
+2025-07-15T14:24:21.576Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into arrival_time
+2025-07-15T14:24:21.648Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into arrival_time
+2025-07-15T14:24:21.712Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into arrival_time
+2025-07-15T14:24:21.991Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into arrival_time
+2025-07-15T14:24:22.428Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : ChangeSet db/changelog/init-data/init-arrival_time.xml::ins-data-arr-1::anton ran successfully in 1023ms
+2025-07-15T14:24:22.502Z  INFO 1 --- [api-app] [main] liquibase.ui                             : Running Changeset: db/changelog/init-data/init-arrival_time.xml::ins-data-arr-2::anton
+2025-07-15T14:24:22.533Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Data updated in hotels
+2025-07-15T14:24:22.630Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Data updated in hotels
+2025-07-15T14:24:22.646Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Data updated in hotels
+2025-07-15T14:24:22.662Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Data updated in hotels
+2025-07-15T14:24:22.678Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Data updated in hotels
+2025-07-15T14:24:22.694Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Data updated in hotels
+2025-07-15T14:24:22.710Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Data updated in hotels
+2025-07-15T14:24:22.726Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Data updated in hotels
+2025-07-15T14:24:22.773Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Data updated in hotels
+2025-07-15T14:24:22.833Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : Data updated in hotels
+2025-07-15T14:24:22.879Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : ChangeSet db/changelog/init-data/init-arrival_time.xml::ins-data-arr-2::anton ran successfully in 361ms
+2025-07-15T14:24:22.960Z  INFO 1 --- [api-app] [main] liquibase.ui                             : Running Changeset: db/changelog/init-data/init-amenities.xml::ins-data-amenity-1::anton
+2025-07-15T14:24:22.991Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into amenities
+2025-07-15T14:24:23.230Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into amenities
+2025-07-15T14:24:23.271Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into amenities
+2025-07-15T14:24:23.277Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into amenities
+2025-07-15T14:24:23.307Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into amenities
+2025-07-15T14:24:23.321Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into amenities
+2025-07-15T14:24:23.325Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into amenities
+2025-07-15T14:24:23.340Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into amenities
+2025-07-15T14:24:23.385Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into amenities
+2025-07-15T14:24:23.403Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into amenities
+2025-07-15T14:24:23.431Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : ChangeSet db/changelog/init-data/init-amenities.xml::ins-data-amenity-1::anton ran successfully in 441ms
+2025-07-15T14:24:23.467Z  INFO 1 --- [api-app] [main] liquibase.ui                             : Running Changeset: db/changelog/init-data/init-amenities.xml::ins-data-amenity-2::anton
+2025-07-15T14:24:23.562Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into hotel_amenities
+2025-07-15T14:24:23.577Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into hotel_amenities
+2025-07-15T14:24:23.593Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into hotel_amenities
+2025-07-15T14:24:23.641Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into hotel_amenities
+2025-07-15T14:24:23.657Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into hotel_amenities
+2025-07-15T14:24:23.675Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into hotel_amenities
+2025-07-15T14:24:23.720Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into hotel_amenities
+2025-07-15T14:24:23.737Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into hotel_amenities
+2025-07-15T14:24:23.766Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into hotel_amenities
+2025-07-15T14:24:23.979Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into hotel_amenities
+2025-07-15T14:24:24.027Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into hotel_amenities
+2025-07-15T14:24:24.046Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into hotel_amenities
+2025-07-15T14:24:24.064Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into hotel_amenities
+2025-07-15T14:24:24.080Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into hotel_amenities
+2025-07-15T14:24:24.125Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into hotel_amenities
+2025-07-15T14:24:24.158Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into hotel_amenities
+2025-07-15T14:24:24.191Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : New row inserted into hotel_amenities
+2025-07-15T14:24:24.238Z  INFO 1 --- [api-app] [main] liquibase.changelog                      : ChangeSet db/changelog/init-data/init-amenities.xml::ins-data-amenity-2::anton ran successfully in 679ms
+2025-07-15T14:24:24.398Z  INFO 1 --- [api-app] [main] liquibase.util                           : UPDATE SUMMARY
+2025-07-15T14:24:24.414Z  INFO 1 --- [api-app] [main] liquibase.util                           : Run:                         16
+2025-07-15T14:24:24.429Z  INFO 1 --- [api-app] [main] liquibase.util                           : Previously run:               0
+2025-07-15T14:24:24.452Z  INFO 1 --- [api-app] [main] liquibase.util                           : Filtered out:                 0
+2025-07-15T14:24:24.564Z  INFO 1 --- [api-app] [main] liquibase.util                           : -------------------------------
+2025-07-15T14:24:25.130Z  INFO 1 --- [api-app] [main] liquibase.util                           : Total change sets:           16
+2025-07-15T14:24:25.173Z  INFO 1 --- [api-app] [main] liquibase.util                           : Update summary generated
+2025-07-15T14:24:25.195Z  INFO 1 --- [api-app] [main] liquibase.command                        : Update command completed successfully.
+2025-07-15T14:24:25.323Z  INFO 1 --- [api-app] [main] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 113
+2025-07-15T14:24:25.807Z  INFO 1 --- [api-app] [main] liquibase.lockservice                    : Successfully released change log lock
+2025-07-15T14:24:26.331Z  INFO 1 --- [api-app] [main] liquibase.command                        : Command execution complete
+2025-07-15T14:24:39.913Z  INFO 1 --- [api-app] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-15T14:24:40.337Z  INFO 1 --- [api-app] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-07-15T14:24:40.701Z  INFO 1 --- [api-app] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-15T14:24:44.099Z  INFO 1 --- [api-app] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-15T14:24:44.615Z  WARN 1 --- [api-app] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-15T14:24:44.837Z  INFO 1 --- [api-app] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-15T14:24:56.695Z  INFO 1 --- [api-app] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-15T14:24:56.732Z  INFO 1 --- [api-app] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15T14:25:03.471Z  INFO 1 --- [api-app] [main] com.hotel.aop.LoggingAspect              : Method: TimedAspect com.hotel.config.MetricsConfig.timedAspect(MeterRegistry) took 2 ms
+2025-07-15T14:25:10.773Z  INFO 1 --- [api-app] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:hoteldb'
+2025-07-15T14:25:11.033Z  INFO 1 --- [api-app] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2025-07-15T14:25:11.834Z  INFO 1 --- [api-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8092 (http) with context path '/property-view'
+2025-07-15T14:25:11.939Z  INFO 1 --- [api-app] [main] com.hotel.ApiAppApplication              : Started ApiAppApplication in 143.582 seconds (process running for 157.145)
+2025-07-15T14:25:13.271Z  INFO 1 --- [api-app] [http-nio-8092-exec-1] o.a.c.c.C.[.[.[/property-view]           : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-15T14:25:13.273Z  INFO 1 --- [api-app] [http-nio-8092-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-15T14:25:13.288Z  INFO 1 --- [api-app] [http-nio-8092-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2025-07-15T14:25:13.775Z  INFO 1 --- [api-app] [http-nio-8092-exec-1] com.hotel.aop.LoggingAspect              : Method: Specification com.hotel.dao.specification.HotelSpecification.nameContains(String) took 0 ms
+2025-07-15T14:25:13.777Z  INFO 1 --- [api-app] [http-nio-8092-exec-1] com.hotel.aop.LoggingAspect              : Method: Specification com.hotel.dao.specification.HotelSpecification.brandContains(String) took 0 ms
+2025-07-15T14:25:13.779Z  INFO 1 --- [api-app] [http-nio-8092-exec-1] com.hotel.aop.LoggingAspect              : Method: Specification com.hotel.dao.specification.HotelSpecification.cityContains(String) took 1 ms
+2025-07-15T14:25:13.781Z  INFO 1 --- [api-app] [http-nio-8092-exec-1] com.hotel.aop.LoggingAspect              : Method: Specification com.hotel.dao.specification.HotelSpecification.countryContains(String) took 1 ms
+2025-07-15T14:25:13.783Z  INFO 1 --- [api-app] [http-nio-8092-exec-1] com.hotel.aop.LoggingAspect              : Method: Specification com.hotel.dao.specification.HotelSpecification.hasAmenity(String) took 1 ms
+2025-07-15T14:25:15.553Z  INFO 1 --- [api-app] [http-nio-8092-exec-4] com.hotel.aop.LoggingAspect              : Method: ResponseEntity com.hotel.controller.GlobalExceptionHandler.aggregatedException(Exception) took 28 ms
+2025-07-15T14:25:17.805Z  INFO 1 --- [api-app] [http-nio-8092-exec-3] com.hotel.aop.LoggingAspect              : Method: List org.springframework.data.repository.ListCrudRepository.findAll() took 2521 ms
+2025-07-15T14:25:17.941Z  INFO 1 --- [api-app] [http-nio-8092-exec-3] com.hotel.aop.LoggingAspect              : Method: Map com.hotel.service.HistogramService.getHistogram(String) took 2661 ms
+2025-07-15T14:25:17.910Z  INFO 1 --- [api-app] [http-nio-8092-exec-1] com.hotel.aop.LoggingAspect              : Method: List org.springframework.data.jpa.repository.JpaSpecificationExecutor.findAll(Specification) took 4086 ms
+2025-07-15T14:25:18.003Z  INFO 1 --- [api-app] [http-nio-8092-exec-6] com.hotel.aop.LoggingAspect              : Method: Specification com.hotel.dao.specification.HotelSpecification.nameContains(String) took 0 ms
+2025-07-15T14:25:18.009Z  INFO 1 --- [api-app] [http-nio-8092-exec-6] com.hotel.aop.LoggingAspect              : Method: Specification com.hotel.dao.specification.HotelSpecification.brandContains(String) took 0 ms
+2025-07-15T14:25:18.017Z  INFO 1 --- [api-app] [http-nio-8092-exec-6] com.hotel.aop.LoggingAspect              : Method: Specification com.hotel.dao.specification.HotelSpecification.cityContains(String) took 0 ms
+2025-07-15T14:25:18.042Z  INFO 1 --- [api-app] [http-nio-8092-exec-6] com.hotel.aop.LoggingAspect              : Method: Specification com.hotel.dao.specification.HotelSpecification.countryContains(String) took 0 ms
+2025-07-15T14:25:18.046Z  INFO 1 --- [api-app] [http-nio-8092-exec-6] com.hotel.aop.LoggingAspect              : Method: Specification com.hotel.dao.specification.HotelSpecification.hasAmenity(String) took 0 ms
+2025-07-15T14:25:18.055Z  INFO 1 --- [api-app] [http-nio-8092-exec-3] com.hotel.aop.LoggingAspect              : Method: ResponseEntity com.hotel.controller.HistogramController.getHistogram(String) took 2775 ms
+2025-07-15T14:25:18.180Z  INFO 1 --- [api-app] [http-nio-8092-exec-1] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 218 ms
+2025-07-15T14:25:18.167Z  INFO 1 --- [api-app] [http-nio-8092-exec-6] com.hotel.aop.LoggingAspect              : Method: List org.springframework.data.jpa.repository.JpaSpecificationExecutor.findAll(Specification) took 115 ms
+2025-07-15T14:25:18.200Z  INFO 1 --- [api-app] [http-nio-8092-exec-6] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 8 ms
+2025-07-15T14:25:18.200Z  INFO 1 --- [api-app] [http-nio-8092-exec-1] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 9 ms
+2025-07-15T14:25:18.216Z  INFO 1 --- [api-app] [http-nio-8092-exec-6] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 16 ms
+2025-07-15T14:25:18.219Z  INFO 1 --- [api-app] [http-nio-8092-exec-1] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 4 ms
+2025-07-15T14:25:18.244Z  INFO 1 --- [api-app] [http-nio-8092-exec-1] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 3 ms
+2025-07-15T14:25:18.244Z  INFO 1 --- [api-app] [http-nio-8092-exec-6] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 6 ms
+2025-07-15T14:25:18.273Z  INFO 1 --- [api-app] [http-nio-8092-exec-6] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 4 ms
+2025-07-15T14:25:18.278Z  INFO 1 --- [api-app] [http-nio-8092-exec-1] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 27 ms
+2025-07-15T14:25:18.310Z  INFO 1 --- [api-app] [http-nio-8092-exec-1] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 4 ms
+2025-07-15T14:25:18.313Z  INFO 1 --- [api-app] [http-nio-8092-exec-6] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 38 ms
+2025-07-15T14:25:18.349Z  INFO 1 --- [api-app] [http-nio-8092-exec-1] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 35 ms
+2025-07-15T14:25:18.352Z  INFO 1 --- [api-app] [http-nio-8092-exec-6] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 27 ms
+2025-07-15T14:25:18.353Z  INFO 1 --- [api-app] [http-nio-8092-exec-1] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 3 ms
+2025-07-15T14:25:18.381Z  INFO 1 --- [api-app] [http-nio-8092-exec-1] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 22 ms
+2025-07-15T14:25:18.399Z  INFO 1 --- [api-app] [http-nio-8092-exec-6] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 45 ms
+2025-07-15T14:25:18.516Z  INFO 1 --- [api-app] [http-nio-8092-exec-1] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 130 ms
+2025-07-15T14:25:18.789Z  INFO 1 --- [api-app] [http-nio-8092-exec-6] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 114 ms
+2025-07-15T14:25:18.818Z  INFO 1 --- [api-app] [http-nio-8092-exec-1] com.hotel.aop.LoggingAspect              : Method: List com.hotel.service.SearchService.searchHotels(String,String,String,String,String) took 5043 ms
+2025-07-15T14:25:18.855Z  INFO 1 --- [api-app] [http-nio-8092-exec-1] com.hotel.aop.LoggingAspect              : Method: List com.hotel.controller.SearchController.searchHotels(String,String,String,String,String) took 5202 ms
+2025-07-15T14:25:18.846Z  INFO 1 --- [api-app] [http-nio-8092-exec-6] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 3 ms
+2025-07-15T14:25:18.896Z  INFO 1 --- [api-app] [http-nio-8092-exec-6] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 3 ms
+2025-07-15T14:25:18.912Z  INFO 1 --- [api-app] [http-nio-8092-exec-6] com.hotel.aop.LoggingAspect              : Method: List com.hotel.service.SearchService.searchHotels(String,String,String,String,String) took 909 ms
+2025-07-15T14:25:18.930Z  INFO 1 --- [api-app] [http-nio-8092-exec-6] com.hotel.aop.LoggingAspect              : Method: List com.hotel.controller.SearchController.searchHotels(String,String,String,String,String) took 928 ms
+2025-07-15T14:25:20.174Z  INFO 1 --- [api-app] [http-nio-8092-exec-7] com.hotel.aop.LoggingAspect              : Method: List org.springframework.data.repository.ListCrudRepository.findAll() took 95 ms
+2025-07-15T14:25:20.365Z  INFO 1 --- [api-app] [http-nio-8092-exec-7] com.hotel.aop.LoggingAspect              : Method: Map com.hotel.service.HistogramService.getHistogram(String) took 285 ms
+2025-07-15T14:25:20.367Z  INFO 1 --- [api-app] [http-nio-8092-exec-7] com.hotel.aop.LoggingAspect              : Method: ResponseEntity com.hotel.controller.HistogramController.getHistogram(String) took 289 ms
+2025-07-15T14:25:20.375Z  INFO 1 --- [api-app] [http-nio-8092-exec-8] com.hotel.aop.LoggingAspect              : Method: ResponseEntity com.hotel.controller.GlobalExceptionHandler.aggregatedException(Exception) took 1 ms
+2025-07-15T14:25:22.767Z  INFO 1 --- [api-app] [http-nio-8092-exec-9] com.hotel.aop.LoggingAspect              : Method: Specification com.hotel.dao.specification.HotelSpecification.nameContains(String) took 0 ms
+2025-07-15T14:25:22.816Z  INFO 1 --- [api-app] [http-nio-8092-exec-9] com.hotel.aop.LoggingAspect              : Method: Specification com.hotel.dao.specification.HotelSpecification.brandContains(String) took 0 ms
+2025-07-15T14:25:22.833Z  INFO 1 --- [api-app] [http-nio-8092-exec-9] com.hotel.aop.LoggingAspect              : Method: Specification com.hotel.dao.specification.HotelSpecification.cityContains(String) took 0 ms
+2025-07-15T14:25:22.846Z  INFO 1 --- [api-app] [http-nio-8092-exec-9] com.hotel.aop.LoggingAspect              : Method: Specification com.hotel.dao.specification.HotelSpecification.countryContains(String) took 0 ms
+2025-07-15T14:25:22.870Z  INFO 1 --- [api-app] [http-nio-8092-exec-9] com.hotel.aop.LoggingAspect              : Method: Specification com.hotel.dao.specification.HotelSpecification.hasAmenity(String) took 0 ms
+2025-07-15T14:25:22.983Z  INFO 1 --- [api-app] [http-nio-8092-exec-9] com.hotel.aop.LoggingAspect              : Method: List org.springframework.data.jpa.repository.JpaSpecificationExecutor.findAll(Specification) took 97 ms
+2025-07-15T14:25:23.008Z  INFO 1 --- [api-app] [http-nio-8092-exec-9] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 13 ms
+2025-07-15T14:25:23.044Z  INFO 1 --- [api-app] [http-nio-8092-exec-9] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 3 ms
+2025-07-15T14:25:23.123Z  INFO 1 --- [api-app] [http-nio-8092-exec-9] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 25 ms
+2025-07-15T14:25:23.160Z  INFO 1 --- [api-app] [http-nio-8092-exec-9] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 28 ms
+2025-07-15T14:25:23.179Z  INFO 1 --- [api-app] [http-nio-8092-exec-9] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 3 ms
+2025-07-15T14:25:23.217Z  INFO 1 --- [api-app] [http-nio-8092-exec-9] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 22 ms
+2025-07-15T14:25:23.258Z  INFO 1 --- [api-app] [http-nio-8092-exec-9] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 21 ms
+2025-07-15T14:25:23.281Z  INFO 1 --- [api-app] [http-nio-8092-exec-9] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 12 ms
+2025-07-15T14:25:23.286Z  INFO 1 --- [api-app] [http-nio-8092-exec-9] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 2 ms
+2025-07-15T14:25:23.315Z  INFO 1 --- [api-app] [http-nio-8092-exec-9] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 26 ms
+2025-07-15T14:25:23.320Z  INFO 1 --- [api-app] [http-nio-8092-exec-9] com.hotel.aop.LoggingAspect              : Method: List com.hotel.service.SearchService.searchHotels(String,String,String,String,String) took 554 ms
+2025-07-15T14:25:23.322Z  INFO 1 --- [api-app] [http-nio-8092-exec-9] com.hotel.aop.LoggingAspect              : Method: List com.hotel.controller.SearchController.searchHotels(String,String,String,String,String) took 556 ms
+2025-07-15T14:25:25.137Z  INFO 1 --- [api-app] [http-nio-8092-exec-2] com.hotel.aop.LoggingAspect              : Method: List org.springframework.data.repository.ListCrudRepository.findAll() took 10 ms
+2025-07-15T14:25:25.153Z  INFO 1 --- [api-app] [http-nio-8092-exec-2] com.hotel.aop.LoggingAspect              : Method: Map com.hotel.service.HistogramService.getHistogram(String) took 26 ms
+2025-07-15T14:25:25.155Z  INFO 1 --- [api-app] [http-nio-8092-exec-2] com.hotel.aop.LoggingAspect              : Method: ResponseEntity com.hotel.controller.HistogramController.getHistogram(String) took 28 ms
+2025-07-15T14:25:25.373Z  INFO 1 --- [api-app] [http-nio-8092-exec-5] com.hotel.aop.LoggingAspect              : Method: ResponseEntity com.hotel.controller.GlobalExceptionHandler.aggregatedException(Exception) took 0 ms
+2025-07-15T14:25:27.764Z  INFO 1 --- [api-app] [http-nio-8092-exec-3] com.hotel.aop.LoggingAspect              : Method: Specification com.hotel.dao.specification.HotelSpecification.nameContains(String) took 0 ms
+2025-07-15T14:25:27.772Z  INFO 1 --- [api-app] [http-nio-8092-exec-3] com.hotel.aop.LoggingAspect              : Method: Specification com.hotel.dao.specification.HotelSpecification.brandContains(String) took 0 ms
+2025-07-15T14:25:27.774Z  INFO 1 --- [api-app] [http-nio-8092-exec-3] com.hotel.aop.LoggingAspect              : Method: Specification com.hotel.dao.specification.HotelSpecification.cityContains(String) took 0 ms
+2025-07-15T14:25:27.775Z  INFO 1 --- [api-app] [http-nio-8092-exec-3] com.hotel.aop.LoggingAspect              : Method: Specification com.hotel.dao.specification.HotelSpecification.countryContains(String) took 0 ms
+2025-07-15T14:25:27.777Z  INFO 1 --- [api-app] [http-nio-8092-exec-3] com.hotel.aop.LoggingAspect              : Method: Specification com.hotel.dao.specification.HotelSpecification.hasAmenity(String) took 0 ms
+2025-07-15T14:25:27.797Z  INFO 1 --- [api-app] [http-nio-8092-exec-3] com.hotel.aop.LoggingAspect              : Method: List org.springframework.data.jpa.repository.JpaSpecificationExecutor.findAll(Specification) took 8 ms
+2025-07-15T14:25:27.811Z  INFO 1 --- [api-app] [http-nio-8092-exec-3] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 3 ms
+2025-07-15T14:25:27.851Z  INFO 1 --- [api-app] [http-nio-8092-exec-3] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 39 ms
+2025-07-15T14:25:27.863Z  INFO 1 --- [api-app] [http-nio-8092-exec-3] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 3 ms
+2025-07-15T14:25:27.892Z  INFO 1 --- [api-app] [http-nio-8092-exec-3] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 4 ms
+2025-07-15T14:25:27.902Z  INFO 1 --- [api-app] [http-nio-8092-exec-3] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 2 ms
+2025-07-15T14:25:27.917Z  INFO 1 --- [api-app] [http-nio-8092-exec-3] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 3 ms
+2025-07-15T14:25:27.926Z  INFO 1 --- [api-app] [http-nio-8092-exec-3] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 6 ms
+2025-07-15T14:25:27.945Z  INFO 1 --- [api-app] [http-nio-8092-exec-3] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 3 ms
+2025-07-15T14:25:27.967Z  INFO 1 --- [api-app] [http-nio-8092-exec-3] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 9 ms
+2025-07-15T14:25:27.983Z  INFO 1 --- [api-app] [http-nio-8092-exec-3] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 14 ms
+2025-07-15T14:25:27.994Z  INFO 1 --- [api-app] [http-nio-8092-exec-3] com.hotel.aop.LoggingAspect              : Method: List com.hotel.service.SearchService.searchHotels(String,String,String,String,String) took 230 ms
+2025-07-15T14:25:27.996Z  INFO 1 --- [api-app] [http-nio-8092-exec-3] com.hotel.aop.LoggingAspect              : Method: List com.hotel.controller.SearchController.searchHotels(String,String,String,String,String) took 232 ms
+2025-07-15T14:25:30.227Z  INFO 1 --- [api-app] [http-nio-8092-exec-1] com.hotel.aop.LoggingAspect              : Method: List org.springframework.data.repository.ListCrudRepository.findAll() took 84 ms
+2025-07-15T14:25:30.248Z  INFO 1 --- [api-app] [http-nio-8092-exec-1] com.hotel.aop.LoggingAspect              : Method: Map com.hotel.service.HistogramService.getHistogram(String) took 106 ms
+2025-07-15T14:25:30.251Z  INFO 1 --- [api-app] [http-nio-8092-exec-1] com.hotel.aop.LoggingAspect              : Method: ResponseEntity com.hotel.controller.HistogramController.getHistogram(String) took 109 ms
+2025-07-15T14:25:30.371Z  INFO 1 --- [api-app] [http-nio-8092-exec-6] com.hotel.aop.LoggingAspect              : Method: ResponseEntity com.hotel.controller.GlobalExceptionHandler.aggregatedException(Exception) took 0 ms
+2025-07-15T14:25:32.742Z  INFO 1 --- [api-app] [http-nio-8092-exec-7] com.hotel.aop.LoggingAspect              : Method: Specification com.hotel.dao.specification.HotelSpecification.nameContains(String) took 0 ms
+2025-07-15T14:25:32.752Z  INFO 1 --- [api-app] [http-nio-8092-exec-7] com.hotel.aop.LoggingAspect              : Method: Specification com.hotel.dao.specification.HotelSpecification.brandContains(String) took 0 ms
+2025-07-15T14:25:32.753Z  INFO 1 --- [api-app] [http-nio-8092-exec-7] com.hotel.aop.LoggingAspect              : Method: Specification com.hotel.dao.specification.HotelSpecification.cityContains(String) took 0 ms
+2025-07-15T14:25:32.754Z  INFO 1 --- [api-app] [http-nio-8092-exec-7] com.hotel.aop.LoggingAspect              : Method: Specification com.hotel.dao.specification.HotelSpecification.countryContains(String) took 1 ms
+2025-07-15T14:25:32.767Z  INFO 1 --- [api-app] [http-nio-8092-exec-7] com.hotel.aop.LoggingAspect              : Method: Specification com.hotel.dao.specification.HotelSpecification.hasAmenity(String) took 0 ms
+2025-07-15T14:25:32.782Z  INFO 1 --- [api-app] [http-nio-8092-exec-7] com.hotel.aop.LoggingAspect              : Method: List org.springframework.data.jpa.repository.JpaSpecificationExecutor.findAll(Specification) took 13 ms
+2025-07-15T14:25:32.785Z  INFO 1 --- [api-app] [http-nio-8092-exec-7] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 2 ms
+2025-07-15T14:25:32.791Z  INFO 1 --- [api-app] [http-nio-8092-exec-7] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 3 ms
+2025-07-15T14:25:32.800Z  INFO 1 --- [api-app] [http-nio-8092-exec-7] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 8 ms
+2025-07-15T14:25:32.806Z  INFO 1 --- [api-app] [http-nio-8092-exec-7] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 5 ms
+2025-07-15T14:25:32.816Z  INFO 1 --- [api-app] [http-nio-8092-exec-7] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 8 ms
+2025-07-15T14:25:32.823Z  INFO 1 --- [api-app] [http-nio-8092-exec-7] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 3 ms
+2025-07-15T14:25:32.827Z  INFO 1 --- [api-app] [http-nio-8092-exec-7] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 3 ms
+2025-07-15T14:25:32.840Z  INFO 1 --- [api-app] [http-nio-8092-exec-7] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 4 ms
+2025-07-15T14:25:32.854Z  INFO 1 --- [api-app] [http-nio-8092-exec-7] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 12 ms
+2025-07-15T14:25:32.858Z  INFO 1 --- [api-app] [http-nio-8092-exec-7] com.hotel.aop.LoggingAspect              : Method: HotelDTO com.hotel.service.HotelMapper.toBriefDto(Hotel) took 3 ms
+2025-07-15T14:25:32.861Z  INFO 1 --- [api-app] [http-nio-8092-exec-7] com.hotel.aop.LoggingAspect              : Method: List com.hotel.service.SearchService.searchHotels(String,String,String,String,String) took 119 ms
+2025-07-15T14:25:32.863Z  INFO 1 --- [api-app] [http-nio-8092-exec-7] com.hotel.aop.LoggingAspect              : Method: List com.hotel.controller.SearchController.searchHotels(String,String,String,String,String) took 121 ms
+2025-07-15T14:25:35.070Z  INFO 1 --- [api-app] [http-nio-8092-exec-10] com.hotel.aop.LoggingAspect              : Method: List org.springframework.data.repository.ListCrudRepository.findAll() took 8 ms
+2025-07-15T14:25:35.081Z  INFO 1 --- [api-app] [http-nio-8092-exec-10] com.hotel.aop.LoggingAspect              : Method: Map com.hotel.service.HistogramService.getHistogram(String) took 19 ms
+2025-07-15T14:25:35.094Z  INFO 1 --- [api-app] [http-nio-8092-exec-10] com.hotel.aop.LoggingAspect              : Method: ResponseEntity com.hotel.controller.HistogramController.getHistogram(String) took 32 ms
+2025-07-15T14:25:35.370Z  INFO 1 --- [api-app] [http-nio-8092-exec-9] com.hotel.aop.LoggingAspect              : Method: ResponseEntity com.hotel.controller.GlobalExceptionHandler.aggregatedException(Exception) took 0 ms

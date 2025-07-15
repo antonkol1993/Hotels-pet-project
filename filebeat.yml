@@ -1,0 +1,10 @@
+filebeat.inputs:
+  - type: filestream
+    paths:
+      - /app/logs/app.log
+    fields:
+      service: api-app
+    fields_under_root: true
+
+output.elasticsearch:
+  hosts: ["http://elasticsearch:9200"]

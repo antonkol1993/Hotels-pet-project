@@ -52,6 +52,11 @@ logging:
     org.hibernate.SQL: INFO
     org.hibernate.type.descriptor.sql.BasicBinder: INFO
     liquibase: INFO
+    root: INFO
+  file:
+    path: /app/logs
+    name: /app/logs/app.log
+
 
 springdoc:
   swagger-ui:
