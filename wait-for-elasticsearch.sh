@@ -1,4 +1,6 @@
 #!/bin/sh
+chmod +x /wait-for-elasticsearch.sh || true
+chmod 600 /usr/share/filebeat/filebeat.yml || true
 
 echo "Waiting for Elasticsearch at http://elasticsearch:9200..."
 
