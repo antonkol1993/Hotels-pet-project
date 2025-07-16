@@ -1,10 +1,24 @@
 filebeat.inputs:
   - type: filestream
+    enabled: true
     paths:
       - /app/logs/app.log
     fields:
       service: api-app
     fields_under_root: true
+    multiline.pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}'
+    multiline.negate: true
+    multiline.match: after
 
 output.elasticsearch:
-  hosts: ["http://elasticsearch:9200"]
+  hosts: [ "http://elasticsearch:9200" ]
+
+setup.ilm.enabled: false
+setup.template.enabled: true
+
+logging.level: debug
+logging.selectors: [ "*" ]
+
+setup.kibana:
+  host: "http://kibana:5601"
+

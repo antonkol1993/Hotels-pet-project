@@ -68,11 +68,13 @@ services:
       - elasticsearch
 
   filebeat:
-    image: docker.elastic.co/beats/filebeat:8.13.0
-    command: [ "--strict.perms=false" ]
-
+    build:
+      context: .
+      dockerfile: Dockerfile-filebeat
     volumes:
-      - ./filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
-      - ./logs:/app/logs
+      - ./filebeat.yml:/usr/share/filebeat/filebeat.yml:ro   # конфиг filebeat
+      - ./logs:/app/logs                                     # логи spring-приложения
     depends_on:
       - elasticsearch
+    command: ["filebeat", "-e", "-strict.perms=false"]
+
