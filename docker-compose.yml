@@ -72,9 +72,13 @@ services:
       context: .
       dockerfile: Dockerfile-filebeat
     volumes:
-      - ./filebeat.yml:/usr/share/filebeat/filebeat.yml:ro   # конфиг filebeat
-      - ./logs:/app/logs                                     # логи spring-приложения
+      - ./logs:/app/logs   # путь к логам приложения
+      - ./filebeat.yml:/usr/share/filebeat/filebeat.yml
     depends_on:
       - elasticsearch
-    command: ["filebeat", "-e", "-strict.perms=false"]
+      - kibana
+      - api-app
+    user: root
+
+
 

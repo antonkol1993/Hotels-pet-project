@@ -1,14 +1,15 @@
 FROM docker.elastic.co/beats/filebeat:8.13.0
 
-# Копируем конфиг
-COPY filebeat.yml /usr/share/filebeat/filebeat.yml
-
-# Копируем скрипт ожидания Elasticsearch (если у тебя есть)
-COPY wait-for-elasticsearch.sh /wait-for-elasticsearch.sh
-
-
-# Ставим пользователя root, чтобы в скрипте можно было менять права
 USER root
 
-# Запускаем скрипт ожидания, а затем Filebeat
+# Копируем конфиг
+COPY filebeat.yml /usr/share/filebeat/filebeat.yml
+COPY wait-for-elasticsearch.sh /wait-for-elasticsearch.sh
+
+# Разрешаем выполнение скрипта
+RUN chmod +x /wait-for-elasticsearch.sh \
+    && chown root:filebeat /usr/share/filebeat/filebeat.yml \
+    && chmod 600 /usr/share/filebeat/filebeat.yml
+
+
 ENTRYPOINT ["/wait-for-elasticsearch.sh"]

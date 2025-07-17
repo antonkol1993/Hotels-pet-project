@@ -1,18 +1,10 @@
-#!/bin/sh
-chmod +x /wait-for-elasticsearch.sh || true
-chmod 600 /usr/share/filebeat/filebeat.yml || true
+#!/bin/bash
+set -e
 
-echo "Waiting for Elasticsearch at http://elasticsearch:9200..."
-
-# Ждем пока Elasticsearch запустится (можешь заменить или подправить под свой таймаут)
+echo "⏳ Ожидаем запуск Elasticsearch на http://elasticsearch:9200..."
 until curl -s http://elasticsearch:9200 >/dev/null; do
-  sleep 1
+  sleep 3
 done
 
-echo "Elasticsearch is up! Starting Filebeat..."
-
-# Меняем права на конфиг (требование Filebeat)
-chmod 600 /usr/share/filebeat/filebeat.yml
-
-# Запускаем filebeat в режиме foreground
-exec filebeat -e
+echo "✅ Elasticsearch готов. Запускаем Filebeat."
+/usr/share/filebeat/filebeat -e
